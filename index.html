@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windows XP Calculator</title>
+
+    <link rel="stylesheet" type="text/css" href="./css/stylesheet.css">
+    <script src="./js/javascript.js" defer></script>
+    <link rel="shortcut icon" type="image/x-icon" href="./img/clipart162608.png">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="background">
+            <div class="calcIcon" ondblclick="openCalc()">
+                <h1>Calculator</h1>
+            </div>
+            <div class="calcOpen" id="calcOpen">
+                <div class="calcHead">
+                    <div class="calcHeadIcon"></div>
+                    <h1>Calculator</h1>
+                    <button class="calcHeadButton3" onclick="closeCalc(), displayClear()"></button>
+                    <button class="calcHeadButton2"></button>
+                    <button class="calcHeadButton1"></button>
+                </div>
+                <div class="calcHeadBorder">
+                    <div class="calcOptions">
+                        <div class="calcOptionsHover">Edit</div>
+                        <div class="calcOptionsHover">View</div>
+                        <div class="calcOptionsHover">Help</div>
+                    </div>
+                    <div class="calcDisplay">
+                        <div class="userInput" id="userInputLive"></div>
+                        <div class="inputDisplay" id="userInputHistory"></div>
+                    </div>
+                    <div class="calcButtonsTop">
+                        <button class="backspaceBtn" onclick="lastDigitClear()">Backspace</button>
+                        <button class="clearEverythingBtn" onclick="displayClear()">CE</button>
+                        <button class="clearBtn" id="inputLiveClear" onclick="inputLiveClear()">C</button>
+                    </div>
+                    <div class="calcButtonsBottom">
+                        <div class="calcButtonsBottomArea">
+                            <button id="numpad7" onclick="inputDisplay(7)">7</button>
+                            <button id="numpad8" onclick="inputDisplay(8)">8</button>
+                            <button id="numpad9" onclick="inputDisplay(9)">9</button>
+                            <button id="numpadDivided" onclick="pullOperator(' / ')">/</button>
+                            <button id="numpad4" onclick="inputDisplay(4)">4</button>
+                            <button id="numpad5" onclick="inputDisplay(5)">5</button>
+                            <button id="numpad6" onclick="inputDisplay(6)">6</button>
+                            <button id="numpadTimes" onclick="pullOperator(' * ')">*</button>
+                            <button id="numpad1" onclick="inputDisplay(1)">1</button>
+                            <button id="numpad2" onclick="inputDisplay(2)">2</button>
+                            <button id="numpad3" onclick="inputDisplay(3)">3</button>
+                            <button id="numpadMinus" onclick="pullOperator(' - ')">-</button>
+                            <button id="numpad0" onclick="inputDisplay(0)">0</button>
+                            <button id="numpadDecimal" onclick="inputDisplay('.')">.</button>
+                            <button id="numpadEqual" onclick="calculate()">=</button>
+                            <button id="numpadPlus" onclick="pullOperator(' + ')">+</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class=" credits">© EDV|Graz - Kristijan Majeric
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,271 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+
+}
+
+.background {
+    background-image: url(../img/teahub.io-windows-bliss-wallpaper-2749918.jpg);
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calcIcon {
+    height: 4.3%;
+    width: 2%;
+    position: absolute;
+    background-image: url(../img/Calc.png);
+    background-position: center;
+    background-size: cover;
+    right: 2.3%;
+    bottom: 28.4%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: row;
+
+    h1 {
+        color: rgb(208, 249, 255);
+        text-shadow: 2px 2px 3px black;
+        font-weight: 400;
+        font-size: 1rem;
+        margin: 2.5rem 0 0 0;
+        bottom: -1.4rem;
+        position: absolute;
+    }
+}
+
+.calcOpen {
+    height: 28rem;
+    width: 20rem;
+    background-color: rgb(43, 124, 230);
+    float: left;
+    opacity: 0;
+    transition: .1s;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.calcHead {
+    height: 2.8rem;
+    width: 100%;
+    background: linear-gradient(180deg, rgba(0, 85, 227, 1) 0%, rgba(255, 255, 255, 0.0984768907563025) 3%, rgba(0, 85, 227, 0.8071603641456583) 19%, rgba(0, 85, 227, 0.8071603641456583) 81%, rgba(255, 255, 255, 0.10407913165266103) 97%, rgba(0, 85, 227, 1) 100%);
+    float: left;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    z-index: 999;
+
+
+    .calcHeadIcon {
+        height: 2rem;
+        width: 2rem;
+        float: left;
+        background-image: url(../img/Calc.png);
+        background-position: center;
+        background-size: cover;
+        margin: .4rem .3rem 0 .5rem;
+    }
+
+    h1 {
+        margin: 0;
+        width: fit-content;
+        float: left;
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin: .6rem 0 0 0;
+        color: white;
+        text-shadow: 1px 1px black;
+    }
+
+    button {
+        float: right;
+        margin: .4rem 0 0 0;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    .calcHeadButton1 {
+        height: 2rem;
+        width: 2rem;
+        background-image: url(../img/minimize.png);
+        background-position: center;
+        background-size: cover;
+        outline: 0;
+        border: 0;
+        margin-right: .2rem;
+        border-radius: 3px;
+        border: 1px solid white;
+    }
+
+    .calcHeadButton2 {
+        height: 2rem;
+        width: 2rem;
+        background-image: url(../img/maximize.png);
+        background-position: center;
+        background-size: cover;
+        outline: 0;
+        border: 0;
+        margin-right: .1rem;
+        border-radius: 3px;
+        border: 1px solid white;
+    }
+
+    .calcHeadButton3 {
+        height: 2rem;
+        width: 2rem;
+        background-image: url(../img/exit.png);
+        background-position: center;
+        background-size: cover;
+        outline: 0;
+        border: 0;
+        margin-right: .4rem;
+        border-radius: 3px;
+        border: 1px solid white;
+    }
+
+}
+
+.calcHeadBorder {
+    margin-top: 14%;
+    height: 89%;
+    width: 97.6%;
+    background-color: rgb(236, 233, 216);
+    border-left: 4px solid rgb(0, 85, 227);
+    border-right: 4px solid rgb(0, 85, 227);
+    border-bottom: 4px solid rgb(0, 85, 227);
+}
+
+.calcOptions {
+    height: 2rem;
+    width: 100%;
+    background-color: rgb(236, 233, 216);
+    float: left;
+    border-bottom: .1rem white solid;
+
+    .calcOptionsHover {
+        width: 3rem;
+        height: 100%;
+        float: left;
+        text-align: center;
+        line-height: 2rem;
+        font-weight: 400;
+
+        &:hover {
+            background-color: lightgray;
+            cursor: default;
+        }
+    }
+}
+
+.calcDisplay {
+    height: 3rem;
+    width: 18rem;
+    background-color: white;
+    margin: .2rem 1rem .1rem .69rem;
+    float: left;
+    border: 1px rgb(189, 189, 189) solid;
+
+    .userInput {
+        height: 50%;
+        width: 100%;
+        text-align: end;
+    }
+
+    .inputDisplay {
+        height: 50%;
+        width: 100%;
+        text-align: end;
+        color: gray;
+    }
+}
+
+.calcButtonsTop {
+    height: 3.5rem;
+    width: 18rem;
+    background-color: rgb(236, 233, 216);
+    margin: 0 1rem 0 .75rem;
+    float: left;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    button {
+        height: 65%;
+        width: 27%;
+        border-radius: 5px;
+        border: 1px solid black;
+        background: rgb(222, 222, 222);
+        background: linear-gradient(180deg, rgba(222, 222, 222, 1) 0%, rgba(255, 255, 255, 1) 10%, rgba(255, 255, 255, 1) 90%, rgba(222, 222, 222, 1) 100%);
+        color: rgb(201, 9, 9);
+
+        &:hover {
+            cursor: pointer;
+
+            &:active {
+                background: rgb(209, 208, 200);
+            }
+        }
+    }
+}
+
+.calcButtonsBottom {
+    height: 62%;
+    width: 92%;
+    background-color: rgb(236, 233, 216);
+    margin: 0 1rem 0 .75rem;
+    float: left;
+
+    .calcButtonsBottomArea {
+        height: 90%;
+        width: 88%;
+        margin: .5rem 0 0 1.15rem;
+
+
+
+        button {
+            height: 3rem;
+            width: 3.5rem;
+            background: rgb(222, 222, 222);
+            background: linear-gradient(180deg, rgba(222, 222, 222, 1) 0%, rgba(255, 255, 255, 1) 10%, rgba(255, 255, 255, 1) 90%, rgba(222, 222, 222, 1) 100%);
+            float: left;
+            margin: .2rem;
+            border-radius: 4px;
+            border: 1px solid black;
+
+            &:hover {
+                cursor: pointer;
+
+
+            }
+
+            &:active {
+                background: rgb(209, 208, 200);
+            }
+        }
+    }
+
+
+}
+
+.credits {
+    height: 1rem;
+    width: 15rem;
+    line-height: 1rem;
+    color: white;
+    position: absolute;
+    bottom: 1%;
+    right: 0%;
+}
